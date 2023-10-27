@@ -3,39 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 #from sklearn.datasets import load_boston
 
+# Charger la base de données Boston Housing 
 
-# df = pd.read_csv('/home/charbossly/Bureau/N/BostonHousing.csv')
-
-# #general stats
-# stats = df.describe()
-
-# #params showing
-# stats = stats.transpose()
-
-# # Extract the specific parameters
-# desired_params = stats[['mean', 'max', 'min', 'std']]
-
-
-# print(desired_params)
-
-#var crim
-#crim  = df['crim']
-
-
-
-# Get some basic statistics
-#summary_stats_crim = crim.describe()
-
-# plt.hist(summary_stats_crim, bins=30, color='skyblue', edgecolor='black')
-# plt.xlabel('crim')
-# plt.ylabel('Frequency')
-# plt.title('Distribution of Crim')
-# plt.show()
-
-
-# Charger la base de données Boston Housing depuis sklearn.datasets
-
-boston = pd.read_csv('/home/charbossly/Bureau/N/BostonHousing.csv');
+boston = pd.read_csv('./BostonHousing.csv');
 data = pd.DataFrame(boston)
 data['MEDV'] = boston.medv
 # Ajouter la variable cible MEDV
